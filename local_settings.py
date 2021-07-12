@@ -53,8 +53,8 @@ DATABASES = {
 
 # Internationalization.
 # Documentation: <https://docs.djangoproject.com/en/1.11/topics/i18n/>
-LANGUAGE_CODE = 'en-ca'
-DEFAULT_USER_TIME_ZONE = 'America/Toronto'
+LANGUAGE_CODE = 'zh-hant'
+DEFAULT_USER_TIME_ZONE = 'Asia/Taipei'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -79,7 +79,7 @@ STATICFILES_FINDERS += ('compressor.finders.CompressorFinder',)
 # your email settings.
 
 # Use this if you are just testing.
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # The following block is included for your convenience, if you want 
 # to use Gmail.
@@ -122,7 +122,7 @@ SERVER_EMAIL = 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
 # webserver to serve the static files. This is the directory where all the 
 # static files DMOJ uses will be collected to.
 # You must configure your webserver to serve this directory as /static/ in production.
-STATIC_ROOT = '/tmp/static'
+STATIC_ROOT = '/home/pc2user/site/static'
 
 # URL to access static files.
 #STATIC_URL = '/static/'
@@ -135,7 +135,7 @@ STATIC_ROOT = '/tmp/static'
 ############################################
 
 ## DMOJ site display settings.
-SITE_NAME = 'DMOJ'
+SITE_NAME = 'YZU: MOJ'
 SITE_LONG_NAME = 'DMOJ: Modern Online Judge'
 SITE_ADMIN_EMAIL = 'admin@example.com'
 TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
@@ -163,13 +163,13 @@ BAD_MAIL_PROVIDERS = set()
 
 ## Event server.
 # Uncomment to enable live updating.
-#EVENT_DAEMON_USE = True
+EVENT_DAEMON_USE = True
 
 # Uncomment this section to use websocket/daemon.js included in the site.
 #EVENT_DAEMON_POST = '<ws:// URL to post to>'
 
 # If you are using the defaults from the guide, it is this:
-#EVENT_DAEMON_POST = 'ws://127.0.0.1:15101/'
+EVENT_DAEMON_POST = 'ws://127.0.0.1:15101/'
 
 # These are the publicly accessed interface configurations.
 # They should match those used by the script.
@@ -179,9 +179,9 @@ BAD_MAIL_PROVIDERS = set()
 # i.e. the path to /channels/ exposed by the daemon, through whatever proxy setup you have.
 
 # Using our standard nginx configuration, these should be.
-#EVENT_DAEMON_GET = 'ws://<your domain>/event/'
+EVENT_DAEMON_GET = 'ws://127.0.0.1:15101/event/'
 #EVENT_DAEMON_GET_SSL = 'wss://<your domain>/event/' # Optional
-#EVENT_DAEMON_POLL = '/channels/'
+EVENT_DAEMON_POLL = '/channels/'
 
 # If you would like to use the AMQP-based event server from <https://github.com/DMOJ/event-server>,
 # uncomment this section instead. This is more involved, and recommended to be done
@@ -190,8 +190,8 @@ BAD_MAIL_PROVIDERS = set()
 #EVENT_DAEMON_AMQP_EXCHANGE = '<AMQP exchange to use>'
 
 ## Celery
-#CELERY_BROKER_URL = 'redis://localhost:6379'
-#CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 
 ## CDN control.
 # Base URL for a copy of ace editor.
@@ -324,3 +324,6 @@ LOGGING = {
 ## ======== Custom Configuration ========
 # You may add whatever django configuration you would like here.
 # Do try to keep it separate so you can quickly patch in new settings.
+
+REGISTRATION_OPEN = False
+MOSS_API_KEY = 115828111
