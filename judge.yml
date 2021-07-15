@@ -1,0 +1,22 @@
+id: pc2
+key: a|Phtklxz2!;ralMJb]T64glzS}diIDaI5pb16L1Y6w%`JG^o$Bda&@@gw.J!7T~]^|#|tNb/}G`J%9.S-39XUD_AK4E;9U?e~G|
+problem_storage_root:
+  - /mnt/problems
+runtime:
+  as_x64: /usr/bin/x86_64-linux-gnu-as
+  as_x86: /usr/bin/as
+  awk: /usr/bin/mawk
+  cat: /bin/cat
+  g++: /usr/bin/g++
+  g++11: /usr/bin/g++-5
+  g++14: /usr/bin/g++-5
+  g++17: /usr/bin/g++
+  g++20: /usr/bin/g++
+  gcc: /usr/bin/gcc
+  gcc11: /usr/bin/gcc
+  ld_x64: /usr/bin/x86_64-linux-gnu-ld
+  ld_x86: /usr/bin/ld
+  perl: /usr/bin/perl
+  python: /usr/bin/python2.7
+  sed: /bin/sed
+  python3: /usr/bin/python3
