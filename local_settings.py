@@ -17,7 +17,7 @@ DEBUG = True  # Change to False once you are done with runserver testing.
 
 # Uncomment and set to the domain names this site is intended to serve.
 # You must do this once you set DEBUG to False.
-#ALLOWED_HOSTS = ['dmoj.ca']
+ALLOWED_HOSTS = ['140.138.145.203']
 
 # Optional apps that DMOJ can make use of.
 INSTALLED_APPS += (
@@ -38,7 +38,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dmoj',
         'USER': 'dmoj',
-        'PASSWORD': '<password>',
+        'PASSWORD': 'user@pc2server',
         'HOST': '127.0.0.1',
         'OPTIONS': {
             'charset': 'utf8mb4',
