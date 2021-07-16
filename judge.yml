@@ -1,7 +1,7 @@
 id: pc2
 key: 5LC5{qB-8MN:j]/A;9@e(T*7Lp_bX5]1$Pr?!6If@ExNI?2,]L+@vc8a9IX0i)5tX|60-%=r*n&5dO~4q=n_&Vo/I}-8~@5G-EvA
 problem_storage_root:
-  - /mnt/problems
+  - /home/pc2user/problems
 runtime:
   as_x64: /usr/bin/x86_64-linux-gnu-as
   as_x86: /usr/bin/as
