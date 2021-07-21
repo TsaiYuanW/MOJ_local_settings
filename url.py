@@ -229,6 +229,44 @@ urlpatterns = [
 
         url(r'^/$', lambda _, contest: HttpResponsePermanentRedirect(reverse('contest_view', args=[contest]))),
     ])),
+    
+    
+    url(r'^assignments/', paged_list_view(assignments.AssignmentList, 'assignment_list')),
+    url(r'^assignments/(?P<year>\d+)/(?P<month>\d+)/$', assignments.AssignmentCalendar.as_view(), name='assignment_calendar'),
+    url(r'^assignments/tag/(?P<name>[a-z-]+)', include([
+        url(r'^$', assignments.AssignmentTagDetail.as_view(), name='assignment_tag'),
+        url(r'^/ajax$', assignments.AssignmentTagDetailAjax.as_view(), name='assignment_tag_ajax'),
+    ])),
+
+    url(r'^assignment/(?P<assignment>\w+)', include([
+        url(r'^$', assignments.AssignmentDetail.as_view(), name='assignment_view'),
+        url(r'^/moss$', assignments.AssignmentMossView.as_view(), name='assignment_moss'),
+        url(r'^/moss/delete$', assignments.AssignmentMossDelete.as_view(), name='assignment_moss_delete'),
+        url(r'^/clone$', assignments.AssignmentClone.as_view(), name='assignment_clone'),
+        url(r'^/ranking/$', assignments.AssignmentRanking.as_view(), name='assignment_ranking'),
+        url(r'^/ranking/ajax$', assignments.assignment_ranking_ajax, name='assignment_ranking_ajax'),
+        url(r'^/join$', assignments.AssignmentJoin.as_view(), name='assignment_join'),
+        url(r'^/leave$', assignments.AssignmentLeave.as_view(), name='assignment_leave'),
+        url(r'^/stats$', assignments.AssignmentStats.as_view(), name='assignment_stats'),
+
+        url(r'^/rank/(?P<problem>\w+)/',
+            paged_list_view(ranked_submission.AssignmentRankedSubmission, 'assignment_ranked_submissions')),
+
+        url(r'^/submissions/(?P<user>[\w-]+)/',
+            paged_list_view(submission.UserAllAssignmentSubmissions, 'assignment_all_user_submissions')),
+        url(r'^/submissions/(?P<user>[\w-]+)/(?P<problem>\w+)/',
+            paged_list_view(submission.UserAssignmentSubmissions, 'assignment_user_submissions')),
+
+        url(r'^/participations$', assignments.AssignmentParticipationList.as_view(), name='assignment_participation_own'),
+        url(r'^/participations/(?P<user>[\w-]+)$',
+            assignments.AssignmentParticipationList.as_view(), name='assignment_participation'),
+        url(r'^/participation/disqualify$', assignments.AssignmentParticipationDisqualify.as_view(),
+            name='assignment_participation_disqualify'),
+
+        url(r'^/$', lambda _, assignment: HttpResponsePermanentRedirect(reverse('assignment_view', args=[assignment]))),
+    ])),
+
+
 
     url(r'^organizations/$', organization.OrganizationList.as_view(), name='organization_list'),
     url(r'^organization/(?P<pk>\d+)-(?P<slug>[\w-]*)', include([
