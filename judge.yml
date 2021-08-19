@@ -1,22 +1,21 @@
 id: pc2
-key: s>EZLQ1GCuu?3VJH:{yo=i{Yy3.n;{Oc{U(a]wp.U_#LR3G3NzFNZRN1S%)h/{@g|D}akF<X;2*~u?N(yfC&9S2ZJ??PRcw[^+bV
+key: jD&9AXAKNK##K=]s[4Lp(kUSYV747JF&YK$GF4c{r5&ENLSa.w1CAu)[xRDkwXRuPeHp)1E:;:uM[vLb?C<G8iShHdl(;L?Mx`wT
 problem_storage_root:
-  - /home/pc2user/problems
+  - /home/domjudge/problems
 runtime:
   as_x64: /usr/bin/x86_64-linux-gnu-as
   as_x86: /usr/bin/as
   awk: /usr/bin/mawk
-  cat: /bin/cat
+  cat: /usr/bin/cat
   g++: /usr/bin/g++
-  g++11: /usr/bin/g++-5
-  g++14: /usr/bin/g++-5
+  g++11: /usr/bin/g++
+  g++14: /usr/bin/g++
   g++17: /usr/bin/g++
-  g++20: /usr/bin/g++
   gcc: /usr/bin/gcc
   gcc11: /usr/bin/gcc
   ld_x64: /usr/bin/x86_64-linux-gnu-ld
   ld_x86: /usr/bin/ld
   perl: /usr/bin/perl
   python: /usr/bin/python2.7
-  sed: /bin/sed
   python3: /usr/bin/python3
+  sed: /usr/bin/sed
