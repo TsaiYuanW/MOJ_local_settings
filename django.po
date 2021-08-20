@@ -2510,7 +2510,7 @@ msgstr ""
 
 #: judge/views/contests.py:70
 msgid "Contests"
-msgstr "競賽"
+msgstr "作業"
 
 #: judge/views/contests.py:205
 msgid "Could not find such contest."
@@ -3272,11 +3272,11 @@ msgstr ""
 
 #: templates/blog/list.html:154
 msgid "Ongoing contests"
-msgstr ""
+msgstr "Ongoing homeworks"
 
 #: templates/blog/list.html:172
 msgid "Upcoming contests"
-msgstr ""
+msgstr "Upcoming homeworks"
 
 #: templates/blog/list.html:189
 msgid "Comment stream"
