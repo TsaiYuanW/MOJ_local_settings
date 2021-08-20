@@ -122,7 +122,7 @@ SERVER_EMAIL = 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
 # webserver to serve the static files. This is the directory where all the 
 # static files DMOJ uses will be collected to.
 # You must configure your webserver to serve this directory as /static/ in production.
-STATIC_ROOT = '/home/pc2user/site/static'
+STATIC_ROOT = '/home/domjudge/site/static'
 
 # URL to access static files.
 #STATIC_URL = '/static/'
@@ -136,7 +136,7 @@ STATIC_ROOT = '/home/pc2user/site/static'
 
 ## DMOJ site display settings.
 SITE_NAME = 'YZU: MOJ'
-SITE_LONG_NAME = 'DMOJ: Modern Online Judge'
+SITE_LONG_NAME = 'MOJ: Modern Online Judge'
 SITE_ADMIN_EMAIL = 'admin@example.com'
 TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
 
@@ -328,4 +328,4 @@ LOGGING = {
 REGISTRATION_OPEN = False
 MOSS_API_KEY = 115828111
 DMOJ_SUBMISSION_SOURCE_VISIBILITY = 'only-own'
-DMOJ_PROBLEM_DATA_ROOT = '/home/pc2user/problems'
+DMOJ_PROBLEM_DATA_ROOT = '/home/domjudge/problems'
